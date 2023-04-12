@@ -1,0 +1,55 @@
+<h2 class="card-title">LISTADO DE MASCOTAS</h2>
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <button type="button" class="btn btn-primary btn-sm" >Create</button>
+        </div>
+       
+<div class="card">
+    <div class="card-body">
+     
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Peso</th>
+            <th scope="col">color</th>
+            <th scope="col">Imagen</th>
+            <th scope="col">acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pet of pet; let i = index">
+            <td>{{ pet.namePet }}</td>
+            <td>{{ pet.edad }} años </td>
+            <td>{{ pet.peso }} Kg</td>
+            <td>{{ pet.color }}</td>
+            <td></td>
+            <td>
+              <button
+                type="button"
+                class="btn btn-warning btn-sm me-md-2"
+              >
+                Edit
+              </button>
+
+
+              <button
+                type="button"
+                class="btn btn-info btn-sm me-md-2"
+              >
+               Detalle
+              </button>
+
+              <button
+                type="button"
+                class="btn btn-danger btn-sm"
+              >
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
